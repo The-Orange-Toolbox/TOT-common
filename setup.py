@@ -2,14 +2,14 @@ from distutils.core import setup
 setup(
     name='totcommon',
     packages=['totcommon'],
-    version='0.0.1',
+    version='0.0.2',
     license='gpl-3.0',
     description='A.',
     author='Maxime Dupuis',
     author_email='mdupuis@hotmail.ca',
     url='https://github.com/The-Orange-Toolbox/TOT-common',
     keywords=[],
-    install_requires=[],
+    install_requires=['PyInstaller'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
