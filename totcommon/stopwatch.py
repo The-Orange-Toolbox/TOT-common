@@ -1,5 +1,6 @@
 from datetime import datetime
 
+
 class StopWatch:
     def __init__(self):
         pass
@@ -13,5 +14,5 @@ class StopWatch:
             return
         elapsed_time = datetime.now() - self.initial_time
         elapsed_secs = elapsed_time.total_seconds()
-        print('{:.1f} seconds elapsed'.format(elapsed_secs), 
-               end="\n", flush=True)
+        print('{:.1f} seconds elapsed'.format(elapsed_secs),
+              end="\n", flush=True)

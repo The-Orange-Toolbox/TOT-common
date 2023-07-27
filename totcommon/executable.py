@@ -3,6 +3,7 @@ from totcommon.updater import check_updates
 from totcommon.reporter import ErrorReporter
 from totcommon.stopwatch import StopWatch
 
+
 class TOTExecutable:
     def __init__(self, name, orgname, url, version, build_date):
         self.name = name
@@ -10,7 +11,7 @@ class TOTExecutable:
         self.url = url
         self.version = version
         self.build_date = build_date
-        
+
         print_header(orgname, name, build_date)
         check_updates(name, version, url)
 

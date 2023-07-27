@@ -1,6 +1,7 @@
 import urllib.request
 import json
 
+
 def check_updates(NAME, VERSION, URL):
     def parse_version(vstr):
         vstrs = vstr.lstrip('v').split('.')

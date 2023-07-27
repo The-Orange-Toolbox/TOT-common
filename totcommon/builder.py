@@ -4,8 +4,9 @@ import os
 import re
 from shutil import copy, make_archive
 
+
 def builder(exeName, orgName='The Orange Toolbox', url=None, version='0.0.1', assets=[]):
-    
+
     builddate = datetime.datetime.now().strftime('%b %d %Y')
     distDir = './dist/' + exeName + '-v' + str(version)
     exeDir = distDir + '/' + exeName
@@ -20,11 +21,11 @@ def builder(exeName, orgName='The Orange Toolbox', url=None, version='0.0.1', as
         f.write("URL = \"{}\"\n".format(url))
 
     args = ['src/__main__.py',
-        '-p', 'src',
-        '-n', exeName,
-        '-F',
-        '--distpath', exeDir,
-        '--icon', iconPath]
+            '-p', 'src',
+            '-n', exeName,
+            '-F',
+            '--distpath', exeDir,
+            '--icon', iconPath]
 
     # Build!
     assets = assets or []
@@ -34,7 +35,7 @@ def builder(exeName, orgName='The Orange Toolbox', url=None, version='0.0.1', as
     def add_file(path):
         if os.path.isfile(path):
             copy(path, exeDir)
-    
+
     add_file('./plugins/compilepal/meta.json')
     add_file('./plugins/compilepal/parameters.json')
 
